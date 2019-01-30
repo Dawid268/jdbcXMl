@@ -1,0 +1,15 @@
+<br><br>
+<div class="form-group col-md-4">
+  <label for="inputState">Tablica {{idd}}</label>
+  <select id="inputState" class="form-control" [(ngModel)]="selectedLevel">
+    <option selected *ngFor = "let l of fieldsName;  let i = index" [ngValue]="l">{{l}}</option>
+  </select><br><br>
+  <button type="button" (click)="selected()"  class="btn btn-primary" >Wybierz Pojedyńcze Pole</button><br><br>
+  <button type="button" (click)="addSelectedList(selectedLevel)"  class="btn btn-primary" >Dodaj Pole do Listy</button><br><br>
+  <button type="button" (click)="sendMultipleFields()"  class="btn btn-primary" >Pobierz kilka pól</button><br><br>
+  <button type="button" (click)="getAll()"  class="btn btn-primary" >Wszystkie Pola</button><br><br>
+  <label>
+    Nazwa Bazy danych
+    <input type="text" [(ngModel)] = "dbName">
+  </label>
+</div>

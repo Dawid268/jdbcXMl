@@ -1,0 +1,14 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let t of tableList; let i = index">
+    <th scope="row">{{i}}</th>
+    <td>{{t}}</td><button type="button" [routerLink]="[t]"  class="btn btn-primary">{{t}}</button>
+  </tr>
+  </tbody>
+</table>
